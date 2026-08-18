@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.catalog.exception.DuplicateSkuException;
@@ -19,7 +18,6 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository repository;
 
-    @Autowired
     public ProductServiceImpl(ProductRepository repository) {
         this.repository = repository;
     }
