@@ -3,8 +3,8 @@ package com.example.catalog.service;
 import java.math.BigDecimal;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.example.catalog.exception.DuplicateSkuException;
 import com.example.catalog.exception.ProductNotFoundException;
@@ -12,13 +12,14 @@ import com.example.catalog.model.Product;
 import com.example.catalog.model.ProductRequest;
 import com.example.catalog.repository.InMemoryProductRepository;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ProductServiceTest {
     private ProductService service;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         service = new ProductServiceImpl(new InMemoryProductRepository());
     }
@@ -38,14 +39,15 @@ public class ProductServiceTest {
         assertEquals("MOU-400", product.getSku());
     }
 
-    @Test(expected = DuplicateSkuException.class)
+    @Test
     public void shouldRejectDuplicateSku() {
-        service.createProduct(request("LAP-100", "Another Laptop", "10.00"));
+        assertThrows(DuplicateSkuException.class, () ->
+            service.createProduct(request("LAP-100", "Another Laptop", "10.00")));
     }
 
-    @Test(expected = ProductNotFoundException.class)
+    @Test
     public void shouldRejectUnknownProduct() {
-        service.getProduct(999L);
+        assertThrows(ProductNotFoundException.class, () -> service.getProduct(999L));
     }
 
     private ProductRequest request(String sku, String name, String price) {

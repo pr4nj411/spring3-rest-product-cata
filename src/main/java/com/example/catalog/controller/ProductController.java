@@ -18,7 +18,7 @@ import com.example.catalog.model.ProductRequest;
 import com.example.catalog.service.ProductService;
 
 @Controller
-@RequestMapping("/products")
+@RequestMapping("/api/products")
 public class ProductController {
 
     private final ProductService service;
