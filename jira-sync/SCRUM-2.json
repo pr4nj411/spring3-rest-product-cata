@@ -1,0 +1,18 @@
+{
+  "jira_ticket_id": "SCRUM-2",
+  "jira_ticket_url": "https://ascendionconfluence.atlassian.net/browse/SCRUM-2",
+  "github_issue_title": "[SCRUM-2] Order Fulfillment & External Integration",
+  "github_issue_body": "## Jira Ticket: SCRUM-2\n\n**Source:** [SCRUM-2](https://ascendionconfluence.atlassian.net/browse/SCRUM-2)\n\n**Issue Type:** Workstream\n**Status:** To Do\n**Priority:** Not specified\n**Project:** AAVA QE (SCRUM)\n\n---\n\n## Description\n\nImplement end-to-end order processing workflow with seamless integration to external payment gateway, shipping service, and email notification systems. This epic enables customers to complete purchases and receive order confirmations and shipping updates.\n\n---\n\n## Acceptance Criteria\n\nNot specified in issue\n\n---\n\n## Additional Details\n\n- **Hierarchy Level:** 1 (Workstream)\n- **Issue Type Description:** Workstreams track a set of related work and activities that work towards a larger deliverable.\n- **Assignee:** Unassigned\n- **Labels:** None\n- **Child Stories:** No child stories found - This is a Workstream level issue\n\n---\n\n## Compliance & Audit\n\n- **Compliance Notes:** No PII/PHI/PCI data detected in issue fields\n- **Authentication Status:** Successful\n- **RBAC Enforcement:** Applied\n- **Synced By:** pranjal.verma@ascendion.com\n- **Sync Timestamp:** 2024\n\n---\n\n## Comments\n\nNo comments available\n\n---\n\n## Attachments\n\nNo attachments available\n\n---\n\n*This issue was automatically created from Jira ticket SCRUM-2*",
+  "sync_metadata": {
+    "synced_at": "2024",
+    "synced_by": "pranjal.verma@ascendion.com",
+    "jira_issue_id": "19490",
+    "jira_issue_key": "SCRUM-2",
+    "operations_performed": [
+      "retrieve_issue",
+      "retrieve_history",
+      "create_github_issue"
+    ],
+    "compliance_scan_passed": true
+  }
+}
